@@ -37,7 +37,7 @@ crmApp.directive("linkageTransfer",['ngToast',function(ngToast){
         restrict: 'EA',
         template: '<div class="transfer-wrap">' +
                         // 标题部分
-                        '<ul class="transfer-title-box">' +
+                        '<ul class="transfer-title-box" ng-if="(sourceName && sourceName != \'\') || (targetName && targetName != \'\')">' +
                             '<li class="transfer-title-item" style="width:{{transfer_leftBoxWidth+\'px\'}};" ng-bind="sourceName">--</li>'+
                             '<li class="transfer-title-item" style="width:{{transfer_rightBoxWidth+\'px\'}};margin-left: 70px;" ng-if="isMultiple || isTable || isTree" ng-bind="targetName">--</li>'+
                             '<li class="transfer-title-item" style="width:{{transfer_rightBoxWidth+\'px\'}};margin-left: 20px;" ng-if="!isMultiple && !isTable && !isTree" ng-bind="targetName">--</li>'+
@@ -542,6 +542,69 @@ crmApp.directive("linkageTransfer",['ngToast',function(ngToast){
             };
 
             /**********************************监听区域***************************************************/
+
+            scope.$watch('sourceData',function (nV,oV) {
+                scope.transfer_sourceDataCopy = angular.copy(nV);//源列表拷贝
+            });
+            scope.$watch('sourceData',function (nV,oV) {
+                scope.transfer_targetDataCopy = angular.copy(scope.targetData);//目标列表拷贝
+            });
+            scope.$watch('showSourceNum',function (nV,oV) {
+                scope.showSourceNum = nV;
+            });
+            scope.$watch('showTargetNum',function (nV,oV) {
+                scope.showTargetNum = nV;
+            });
+            scope.$watch('keyValue',function (nV,oV) {
+                scope.keyValue = nV;
+                scope.itemKey = scope.keyValue.split(',')[0];
+                scope.itemValue = scope.keyValue.split(',')[1];
+            });
+            scope.$watch('treeChildrenKey',function (nV,oV) {
+                scope.treeChildrenKey = nV;
+            });
+            scope.$watch('tableColumns',function (nV,oV) {
+                scope.tableColumns = nV;
+            });
+            scope.$watchGroup(['sourceName','targetName','isTable','isTree','isMultiple'],function (nV,oV) {
+                scope.sourceName = nV[0];
+                scope.targetName = nV[1];
+                scope.isTable = nV[2];
+                scope.isTree = nV[3];
+                scope.isMultiple = nV[4];
+
+                if(scope.isTree){
+                    scope.transfer_leftBoxWidth = (angular.element(element[0]).width()-70)*3/4;
+                    scope.transfer_rightBoxWidth = (angular.element(element[0]).width()-70)/4;
+                }else if(!scope.isMultiple && !scope.isTable){
+                    scope.transfer_leftBoxWidth = (angular.element(element[0]).width()-20)/2;
+                    scope.transfer_rightBoxWidth = (angular.element(element[0]).width()-20)/2;
+                }else{
+                    scope.transfer_leftBoxWidth = (angular.element(element[0]).width()-70)/2;
+                    scope.transfer_rightBoxWidth = (angular.element(element[0]).width()-70)/2;
+                }
+
+                //判断有没有标题，有标题高度 - 30
+                if(typeof scope.sourceName === 'undefined' || scope.sourceName === ''){
+                    scope.transfer_boxHeight = angular.element(element[0]).height();
+                }else{
+                    scope.transfer_boxHeight = angular.element(element[0]).height()-30;
+                }
+                if(!scope.isTable && !scope.isTree && !scope.isMultiple){//基本 单选 无按钮
+                    scope.transferType = 'defaultSingle';
+                }else if(!scope.isTable && !scope.isTree && scope.isMultiple){//基本 多选 有按钮
+                    scope.transferType = 'defaultMultiple';
+                }else if(!scope.isTable && scope.isTree && !scope.isMultiple){//树形 单选 有按钮
+                    scope.transferType = 'treeSingle';
+                }else if(!scope.isTable && scope.isTree && scope.isMultiple){//树形 多选 有按钮
+                    scope.transferType = 'treeMultiple';
+                }else if(scope.isTable && !scope.isTree && !scope.isMultiple){//表格 单选 有按钮
+                    scope.transferType = 'tableSingle';
+                }else if(scope.isTable && !scope.isTree && scope.isMultiple){//表格 多选 有按钮
+                    scope.transferType = 'tableMultiple';
+                }
+                // console.log(nV);
+            });
 
             /**
              * 监听可选部分数据
