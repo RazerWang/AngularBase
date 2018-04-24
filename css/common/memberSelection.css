@@ -1,0 +1,156 @@
+/*一级菜单没有选中数据*/
+.member-selection {
+  height: 360px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+.member-selection .member-selection-comment {
+  height: 309px;
+  position: relative;
+}
+.member-selection .member-selection-comment .selection-menu {
+  float: left;
+  height: 100%;
+  width: 50px;
+  background: #dbe0eb;
+}
+.member-selection .member-selection-comment .selection-menu .menu-list {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  padding: 7px 0;
+  font-size: 12px;
+  color: #666666;
+  line-height: 17px;
+  color: #666;
+  cursor: pointer;
+}
+.member-selection .member-selection-comment .selection-menu .menu-list-active {
+  background: #fff;
+  color: #333;
+}
+.member-selection .member-selection-comment .selection-two-menu {
+  float: left;
+  height: 100%;
+  width: 160px;
+  border-right: 1px solid #dbe0eb;
+  overflow-y: scroll;
+}
+.member-selection .member-selection-comment .selection-two-menu .two-menu-lis {
+  margin: 10px 14px;
+  cursor: pointer;
+}
+.member-selection .member-selection-comment .selection-two-menu .two-menu-lis span {
+  width: 48px;
+  height: 17px;
+  font-size: 12px;
+  color: #666666;
+  line-height: 17px;
+}
+.member-selection .member-selection-comment .selection-two-menu .two-menu-lis-active span {
+  color: #1890ff;
+}
+.member-selection .member-selection-comment .selection-two-menu .two-menu-lis-active i {
+  background: url("../img/icon-qianjin2.png");
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  float: right;
+  width: 16px;
+  height: 16px;
+  background-position: center center;
+}
+.member-selection .member-selection-comment .selection-comment {
+  float: left;
+  height: 100%;
+  width: 272px;
+}
+.member-selection .member-selection-comment .selection-comment .alphabet {
+  height: 70px;
+}
+.member-selection .member-selection-comment .selection-comment .alphabet div {
+  padding: 10px 21px;
+  height: 50px;
+}
+.member-selection .member-selection-comment .selection-comment .alphabet .letter {
+  float: left;
+  width: 9px;
+  cursor: pointer;
+  height: 17px;
+  font-size: 12px;
+  color: #999999;
+  line-height: 17px;
+  margin: 5px 4px;
+}
+.member-selection .member-selection-comment .selection-comment .alphabet .letter-active {
+  color: #1890ff;
+}
+.member-selection .member-selection-comment .selection-comment.selection-comment1 .alphabet div {
+  padding: 10px 20px;
+  height: 50px;
+}
+.member-selection .member-selection-comment .selection-comment .nav {
+  height: 14px;
+  background: #1890ff;
+  line-height: 14px;
+}
+.member-selection .member-selection-comment .selection-comment .nav span {
+  width: 6px;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 14px;
+  padding-left: 10px;
+}
+.member-selection .member-selection-comment .selection-comment .nav-conment {
+  height: 220px;
+  margin: 2px 0;
+  overflow-y: auto;
+  position: relative;
+  width: 270px;
+}
+.member-selection .member-selection-comment .selection-comment .nav-conment .nav-lis {
+  height: 26px;
+  margin-top: 7px;
+}
+.member-selection .member-selection-comment .selection-checked {
+  float: left;
+  height: 100%;
+  border-left: 1px solid #dbe0eb;
+  width: 180px;
+}
+.member-selection .member-selection-comment .selection-checked .checked-title {
+  background: #dedede;
+  padding: 7px 10px 7px 16px;
+  font-size: 12px;
+  color: #666666;
+  line-height: 17px;
+  color: #666;
+  cursor: pointer;
+}
+.member-selection .member-selection-comment .selection-checked .checked-lis {
+  height: 265px;
+  overflow-y: scroll;
+  margin: 5px;
+}
+.member-selection .member-selection-comment .selection-checked .checked-lis .nav-lis {
+  height: 26px;
+  margin-top: 7px;
+}
+.member-selection .member-selection-success {
+  border-top: 1px solid #dbe0eb;
+  height: 30px;
+  text-align: center;
+  padding: 13px 0 7px 0;
+}
+/*二级菜单 选中数据*/
+/*二级菜单没有选择数据*/
+/*全部 没有二级分支的情况*/
+/*部门 二级分支的情况*/
+/*.member-selection .member-selection-comment .selection-comment.selection-comment1{margin-left: 211px;height: 100%;width: 272px;}*/
+/*首字母样式*/
+/*字母导航条*/
+/*选择按钮区域*/
+/*字母的样式*/
+/*底部样式*/

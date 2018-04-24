@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors joyXie (xiec@linkstec.com)
+ * @date    2018-01-17 10:19:46
+ * @version table组件
+ */
+/****table****/
+.table-container {
+  border: 1px solid #DBE0EB;
+  border-top: none;
+  position: relative;
+}
+.table-container .tableDiv {
+  overflow: auto;
+}
+.table-container .tableDiv.modal-table-div {
+  margin-bottom: 0px;
+}
+.table-container .tableDiv .table {
+  background-color: #fff;
+  margin-bottom: 0px;
+}
+.table-container .tableDiv .table tr {
+  position: relative;
+  border-bottom: 1px solid #DBE0EB;
+}
+.table-container .tableDiv .table tr td,
+.table-container .tableDiv .table tr th {
+  height: 24px;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  /*min-width: 120px;max-width: 120px;*/
+  padding-right: 20px;
+  /*排序三角形*/
+}
+.table-container .tableDiv .table tr td .trangleUp,
+.table-container .tableDiv .table tr th .trangleUp {
+  top: 12px;
+}
+.table-container .tableDiv .table tr td .trangleDown,
+.table-container .tableDiv .table tr th .trangleDown {
+  top: 23px;
+}
+.table-container .tableDiv .table tr td:first-child,
+.table-container .tableDiv .table tr th:first-child {
+  padding-right: 8px;
+}
+.table-container .tableDiv .table tr th {
+  color: #333333;
+  font-size: 14px;
+  position: relative;
+  height: 23px;
+  line-height: 23px;
+  box-sizing: border-box;
+}
+.table-container .tableDiv .table tr td {
+  height: 40px;
+  line-height: 40px;
+  color: #666666;
+  font-size: 14px;
+  padding: 0px 8px;
+  box-sizing: border-box;
+}
+.table-container .tableDiv .table tr td .link-span {
+  cursor: pointer;
+  color: #488FE3;
+  margin-right: 5px;
+}
+.table-container .tableDiv .table tr td .link-span:hover {
+  text-decoration: underline;
+}
+.table-container .tableDiv .table tr td .link-span:last-child {
+  margin-right: 0px;
+}
+.table-container .tableDiv .table tr td .blue-span {
+  color: #488FE3;
+}
+.table-container .tableDiv .table tr td .red-span {
+  color: #DB2028;
+}
+.table-container .tableDiv .table tr td .operate-span {
+  position: absolute;
+  right: 0px;
+  background-color: #F0F8FF;
+  transition-duration: 0.3s;
+  width: 0px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 11;
+}
+.table-container .tableDiv .table tr td .operate-span.operate-span-open .lk-icon-arrowD:before {
+  display: inline-block;
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+.table-container .tableDiv .table tr.tr-hover td .operate-span {
+  width: 100px;
+}
+.table-container .tableDiv .table tr:hover td {
+  background-color: #F0F8FF;
+}
+.table-container .tableDiv .table.table-bordered {
+  border: none;
+}
+.table-container .tableDiv .table.table-bordered tr th,
+.table-container .tableDiv .table.table-bordered tr td {
+  border: 1px solid #DBE0EB;
+  border-left: 0;
+}
+.table-container .tableDiv .table.no-table-border {
+  border-left: 0;
+  border-right: 0;
+}
+.table-container .tableDiv .table.no-table-border tr th {
+  cursor: pointer;
+  vertical-align: middle;
+}
+.table-container .tableDiv .table.no-table-border tr th:last-child {
+  border-right: none;
+}
+.table-container .tableDiv .table.no-table-border tr td {
+  border: none;
+}
+.table-container .tableDiv.no-ellipsis tr td {
+  text-overflow: inherit;
+  white-space: inherit;
+  overflow: auto;
+}
+.table-container .table-hover tbody tr.tr-hover {
+  background-color: #F0F8FF;
+}
+.table-container .table-con-true {
+  position: absolute!important;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+.table-container .box-right-shadow {
+  box-shadow: 6px 0 6px -4px rgba(0, 0, 0, 0.2);
+}
+.table-container .box-left-shadow {
+  box-shadow: -6px 0 6px -4px rgba(0, 0, 0, 0.2);
+}
+.table-container .table-header {
+  overflow: hidden;
+}
+.table-container .table-body {
+  position: relative!important;
+  background-color: #fff;
+}
+.table-container .table-header-columns-left {
+  overflow: hidden;
+}
+.table-container .table-columns-left {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+}
+.table-container .table-body-columns-left {
+  overflow: hidden;
+}
+.table-container .table-header-columns-right {
+  overflow: hidden;
+}
+.table-container .table-columns-right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 2;
+  overflow: hidden;
+  border-left: 1px solid #DBE0EB;
+}
+.table-container .table-body-columns-right {
+  overflow: hidden;
+  overflow-y: auto;
+}
+.table-container .right-scroll {
+  overflow-y: scroll;
+}

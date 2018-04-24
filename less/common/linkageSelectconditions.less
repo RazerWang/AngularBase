@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors joyXie (xiec@linkstec.com)
+ * @date    2018-03-29 15:30:13
+ * @version 筛选条件
+ */
+@import "../global";
+
+.select-conditions-wrap{
+
+	.selected-list-wrap{
+		position: relative;
+		border-bottom: 1px solid @colordcdcdc;
+		margin: 0px 20px;
+
+		.selected-conditions-div{
+			float: left;
+			font-size: @font12px;
+			margin-top: 10px;
+			overflow: hidden;
+			.selected-conditions-title{
+				color: @color999999;
+				display: inline-block;
+			}
+			.clear-condotions-btn{
+				display: inline-block;
+				color: @blue;
+				cursor: pointer;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+		
+		.selected-conditions{
+			margin-left: 100px;margin-right: 150px;
+			min-height: 45px;
+			padding: 4px 0px;
+			overflow: hidden;
+			.selected-conditions-ul{
+				.selected-conditions-item{
+					border: 1px solid  @grey;
+					font-size: @font12px;
+					border-radius: @borderRadius4px;
+					margin-left: @space-10px;
+					float: left;padding: 0px 5px;
+					margin: 5px;
+					.selected-conditions-name{
+						color: @color333333;
+						margin-right: 5px;
+					}
+					.lk-icon-close-o{
+						color: @red;
+						font-size: @font12px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+		.open-conditions-btn{
+			position: absolute;right: 0px;
+			top: 7px;
+			.btn{
+				.lk-icon-arrowD{
+					color: @colordcdce3;
+					font-size: @font14px;
+				}
+			}
+		}
+
+	}
+	.to-select-conditions{
+		overflow: hidden;
+		.first-conditions{
+			width: 90px;
+			float: left;
+			background-color: @colordbe0eb;
+			.first-conditions-ul{
+				.first-conditions-item{
+					cursor: pointer;
+					transition-duration: 0.2s;
+					.first-conditions-name{
+						width: 100%;
+						height: 30px;
+						line-height: 30px;
+						text-align: center;
+						font-size: @font12px;
+					}
+					&.tab-active{
+						background-color: @white;
+					}
+				}
+			}
+		}
+		.second-conditions{
+			margin-left: 90px;
+			padding:@space-10px;
+			.second-conditions-ul{
+				.second-conditions-item{
+					overflow: hidden;
+					font-size: @font12px;
+					.second-conditions-title{
+						width: 80px;
+						float: left;
+						text-align: left;
+						line-height: 30px;
+					}
+					.third-conditions{
+						margin-left: 70px;
+						.third-conditions-ul{
+							overflow: hidden;
+							li.third-conditions-item{
+								float: left;
+								margin:3px 10px;
+								padding: 0px 5px;
+								.third-conditions-item-name{
+									color: @color333333;
+									cursor: pointer;
+									// vertical-align: middle;
+								}
+								&.selected-active{
+									background-color: @colore0f0ff;
+								}
+								.insert-form{
+									display: inline-block;
+									vertical-align: middle;
+									.btn-blue{
+										vertical-align: middle;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

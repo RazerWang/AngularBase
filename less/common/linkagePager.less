@@ -1,0 +1,132 @@
+
+.pagination-bar{
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  min-height: 50px;
+  .pagination-box{
+    font-size: 14px;
+    overflow: hidden;
+    display: inline-block;
+    //font-family:"微软雅黑","Microsoft YaHei","Arial","Helvitica","Verdana","Tohoma","san-serif";
+    padding: 10px 0px;
+    .deep-grey-text{
+      color: #666666;
+    }
+    .shallow-grey-text{
+      color: #cccccc;
+    }
+    .black-text{
+      color: #333333;
+    }
+    .blue-color{
+      color: #4699EE;
+    }
+    .grey-border{
+      border: 1px solid #cccccc;
+    }
+    .btn-bg{
+      background-color: #ffffff;
+    }
+    .fl{
+      float: left;
+    }
+    .text-v-center{
+      line-height: 30px;
+    }
+    .gap{
+      margin-right: 6px;
+    }
+    .big-gap{
+      margin-right: 9px;
+    }
+    .disabled{
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+    .no-select {
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Chrome/Safari/Opera */
+      -khtml-user-select: none; /* Konqueror */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; /* Non-prefixed version, currently not supported by any browser */
+    }
+    span{
+      display: inline-block;
+      .no-select;
+    }
+    .pagination-select{
+      .fl;
+      .gap;
+      .grey-border;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      //background-image: url("../img/xialajiantou.png");
+      background-size: 11px auto;
+      background-repeat: no-repeat;
+      background-position: right 6px center;
+      padding: 4px;
+      padding-right: 23px;
+      border-radius: 2px;
+      text-shadow: none;
+      color: #666666;
+    }
+    .pagination-btn{
+      .deep-grey-text;
+      .grey-border;
+      .btn-bg;
+      .gap;
+      .fl;
+      border-radius: 2px;
+      line-height: 18px;
+      padding: 5px 11px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .pagination-list{
+      .fl;
+      display: inline-block;
+      overflow: hidden;
+      .pagination-item-ellipsis{
+        .deep-grey-text;
+        .no-select;
+        .fl;
+        .gap;
+        line-height: 30px;
+        font-size: 14px;
+      }
+      .pagination-item{
+        .deep-grey-text;
+        .grey-border;
+        .btn-bg;
+        .fl;
+        .gap;
+        border-radius: 2px;
+        cursor: pointer;
+        min-width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 20px;
+        padding: 5px 5px;
+      }
+      .pagination-item.pagination-item-active{
+        .blue-color;
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+    }
+    .pagination-input{
+      .fl;
+      .gap;
+      .grey-border;
+      width: 50px;
+      height: 30px;
+      background-color: #ffffff;
+      text-align: center;
+      border-radius: 2px;
+      color: #666666;
+    }
+  }
+}

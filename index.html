@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="linkageCrmApp">
+<head>
+    <title>CRM</title>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content=" ">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+    <!--基础样式库-->
+    <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"><!--bootstrap库-->
+    <link rel="stylesheet" type="text/css" href="./font/lkIconFont/iconfont.css"><!--图标样式-->
+    <link rel="stylesheet" type="text/css" href="./vendor/jquery/dialog/ui-dialog.css"><!--提示弹框-->
+    <link rel="stylesheet" type="text/css" href="./vendor/jquery/dateTime/jquery.datetimepicker.css"><!--日期选择-->
+    <link rel="stylesheet" type="text/css" href="./vendor/jquery/bootstrap/bootstrap-select.css"><!--下拉选择-->
+    <!-- <link rel="stylesheet" href="./css/animate.css"> -->
+
+    <!--通用样式-->
+    <link rel="stylesheet" type="text/css" href="./resource/reset.css"><!--样式重置-->
+    <link rel="stylesheet" type="text/css" href="./css/common/common.css"><!--全局通用样式-->
+    <link rel="stylesheet" type="text/css" href="./resource/animate.css"><!--css动画-->
+
+
+    <!--组件样式-->
+    <link rel="stylesheet" type="text/css" href="./js/angular/ngToast/ngToast-animations.css"/><!--提示框-->
+    <link rel="stylesheet" type="text/css" href="./js/angular/ngToast/ngToast.css"/><!--提示框-->
+    <link rel="stylesheet" type="text/css" href="./css/common/linkageTable.css"><!--表格-->
+    <link rel="stylesheet" type="text/css" href="./css/common/linkagePager.css"><!--分页-->
+    <link rel="stylesheet" type="text/css" href="./css/common/linkageTransfer.css"><!--穿梭框-->
+    <link rel="stylesheet" type="text/css" href="./css/common/complexSelect.css"><!--复杂选择-->
+    <link rel="stylesheet" type="text/css" href="./css/common/linkageSelectconditions.css"><!--高级筛选-->
+    <link rel="stylesheet" type="text/css" href="./css/common/w5cValidator.css"><!--表单验证-->
+    <link rel="stylesheet" type="text/css" href="./css/common/loading.css"><!--loading-->
+    <link rel="stylesheet" type="text/css" href="./css/common/noData.css"><!--暂无数据-->
+
+</head>
+<body ng-controller="indexController">
+
+    <div ui-view="content" class="fade-in-up"></div>
+
+    <!-- loading -->
+    <div class="linkage-loading" ng-show="isLoading">
+        <div class="back000"></div>
+        <div class="loading-span">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <toast></toast>
+
+    <!--jquery插件-->
+    <script type="text/javascript" src="./vendor/jquery/jquery-1.10.2.js"></script><!--jquery-->
+    <script type="text/javascript" src="./vendor/jquery/bootstrap/bootstrap.js"></script><!--bootstrap-->
+    <script type="text/javascript" src="./vendor/jquery/dialog/dialog-plus-min.js"></script><!--提示弹出框-->
+    <script type="text/javascript" src="./vendor/jquery/dateTime/jquery.datetimepicker.js"></script><!--日期选择插件-->
+    <script type="text/javascript" src="./vendor/jquery/bootstrap/bootstrap-select.js"></script><!--下拉选择插件-->
+    <script type="text/javascript" src="./vendor/jquery/clipboard.min.js"></script><!--粘贴板-->
+    <script type="text/javascript" src="./js/common.js"></script><!--全局调用封装函数库-->
+
+    <script type="text/javascript" src="./vendor/echarts/echarts.min.js"></script><!--echarts-->
+
+    <!-- angular -->
+    <!-- <script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.js"></script> -->
+    <script type="text/javascript" src="./js/angular/angular.min.js"></script><!--angular-->
+    <script type="text/javascript" src="./js/angular/angular-ui-router.min.js"></script><!--ui-router-->
+    <script type="text/javascript" src="./js/app.js"></script><!--angular 服务依赖-->
+    <script type="text/javascript" src="./js/config.router.js"></script><!--angular 路由配置-->
+    <script type="text/javascript" src="./js/config.js"></script><!--angular 服务注入配置-->
+    <script type="text/javascript" src="./js/run.js"></script><!--angular 服务注入配置-->
+
+    <!--ng 插件-->
+    <script type="text/javascript" src="./js/angular/angular-animate.min.js"></script><!--angular动画-->
+    <script type="text/javascript" src="./js/angular/ocLazyLoad.min.js"></script><!--懒加载-->
+    <script type="text/javascript" src="./js/angular/angular-sanitize.js"></script><!--bind-html 插件-->
+    <script type="text/javascript" src="./js/angular/ngToast/ngToast.js" ></script><!--提示框插件-->
+    <script type="text/javascript" src="./js/angular/angular-file-upload.min.js"></script><!--文件上传插件-->
+
+    <!--组件-->
+    <script type="text/javascript" src="./js/directive/validateTooltip.js" ></script><!--表单项提示组件-->
+    <script type="text/javascript" src="./js/directive/linkageTable.js" ></script><!--表格组件-->
+    <script type="text/javascript" src="./js/directive/linkagePager.js" ></script><!--页码组件-->
+    <script type="text/javascript" src="./js/directive/linkageTransfer.js" ></script><!--穿梭框组件-->
+    <script type="text/javascript" src="./js/directive/linkageInput.js"></script><!--输入框组件-->
+    <script type="text/javascript" src="./js/directive/linkageSelect.js"></script><!--下拉框组件-->
+    <script type="text/javascript" src="./js/directive/angular-datetime.js"></script><!--日期选择组件-->
+    <script type="text/javascript" src="./js/directive/complexSelect.js"></script><!--复杂选择组件-->
+    <script type="text/javascript" src="./js/directive/noDataDirective.js"></script><!--暂无数据组件-->
+    <script type="text/javascript" src="./js/directive/w5cValidator.js"></script><!--表单验证组件-->
+    <script type="text/javascript" src="./js/directive/linkageSelectconditions.js"></script><!--高级筛选组件-->
+    <script type="text/javascript" src="./js/directive/linkageTree.js"></script><!--树组件-->
+    <script type="text/javascript" src="./js/directive/linkageToggleDown.js"></script><!--展开收起组件-->
+
+    <script type="text/javascript" src="./js/directive/templateDirective.js"></script><!--模版嵌套-->
+
+    <!--filter-->
+    <script type="text/javascript" src="./js/filter/dictionaryFilter.js"></script><!--数据字典过滤器-->
+    <script type="text/javascript" src="./js/filter/htmlTrustedFilter.js"></script><!--不过滤html属性-->
+
+    <!--factory-->
+    <script type="text/javascript" src="./js/factory/getDataFactory.js"></script><!--获取接口数据factory-->
+    <script type="text/javascript" src="./js/factory/getDirectoryData.js"></script><!--获取数据字典factory-->
+
+    <!--index controller-->
+    <script type="text/javascript" src="./js/controller/indexController.js"></script>
+
+</body>
+</html>

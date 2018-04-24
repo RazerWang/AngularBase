@@ -1,0 +1,116 @@
+/**
+ * @Author WangZe (wangze@linkstec.com)
+ * @Date 2018/3/14 10:00
+ * @Function 穿梭框样式
+ **/
+@import "../global";
+.clear-float{
+  &:after{
+    display:block;
+    clear:both;
+    content:"";
+    visibility:hidden;
+    height:0
+  }
+}
+
+.transfer-wrap{
+  .transfer-title-box{
+    height: @space-20px;
+    width: 100%;
+    margin-bottom: @space-10px;
+    .transfer-title-item{
+      height: @space-20px;
+      line-height: @space-20px;
+      font-size: 12px;
+      color: @color666666;
+      float: left;
+    }
+  }
+  .transfer-container{
+    .transfer-box{
+      height: 100%;
+      border: 1px solid @borderColor;
+      border-radius: 4px;
+      float: left;
+      font-size: @font12px;
+      color: @color666666;
+      .transfer-box-header{
+        width: 100%;
+        height: 33px;
+        border-bottom: 1px solid @borderColor;
+        .transfer-item{
+          margin-bottom: 0;
+          font-weight: normal;
+          padding: 7.5px @space-10px;
+          cursor: pointer;
+          input.transfer-checkbox[type="checkbox"]{
+            margin-right: 10px;
+            vertical-align: middle;
+          }
+        }
+      }
+      .transfer-list{
+        overflow: auto;
+        margin: 5px 0;
+        .transfer-item{
+          font-weight: normal;
+          padding: 5px @space-10px;
+          cursor: pointer;
+          height: 28px;
+          overflow: hidden;
+          &.active{
+            background-color: @blue;
+            color: @white;
+          }
+          &.parent-active{
+            background-color: @white;
+            color: @blue;
+          }
+          input.transfer-checkbox[type="checkbox"]{
+            margin-right: 10px;
+            vertical-align: middle;
+          }
+          .transfer-delete-btn{
+            float: right;
+            color: @red;
+            font-size: @font14px;
+          }
+          .transfer-item-text{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            vertical-align: middle;
+          }
+        }
+      }
+
+    }
+    .transfer-btn-box{
+      margin: 0 @space-20px;
+      width: @space-30px;
+      height: 100%;
+      float: left;
+      position: relative;
+      .transfer-btn-list{
+        height: @space-30px*3;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -45px;
+        li{
+          &:first-child{
+            margin-bottom: @space-30px;
+          }
+          .btn{
+            min-width: @space-30px;
+            width: @space-30px;
+            height: @space-30px;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+}

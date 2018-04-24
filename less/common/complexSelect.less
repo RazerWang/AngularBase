@@ -1,0 +1,237 @@
+/*一级菜单没有选中数据*/
+.member-selection {
+  // width: 322px;
+  height: 360px;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,0.2);
+  border-radius: 4px;
+  background: #ffffff;
+  position: relative;
+  display: inline-block;
+  .member-selection-comment {
+    height: 309px;
+    position: relative;
+    // width: 100%;
+    .selection-menu {
+      float: left;
+      height: 100%;
+      width: 50px;
+      background: #dbe0eb;
+      .menu-list {
+        display: inline-block;
+        width: 50px;
+        text-align: center;
+        padding: 7px 0;
+        font-size: 12px;
+        // font-family: PingFangSC-Regular;
+        color: rgba(102,102,102,1);
+        line-height: 17px;
+        color: #666;
+        cursor: pointer;
+      }
+      .menu-list-active {
+        background: #fff;
+        color: #333;
+      }
+    }
+    .selection-two-menu {
+      float: left;
+      height: 100%;
+      width: 160px;
+      border-right: 1px solid #dbe0eb;
+      overflow-y: scroll;
+      .two-menu-lis {
+        margin: 10px 14px;
+        cursor: pointer;
+        span {
+          width: 48px;
+          height: 17px;
+          font-size: 12px;
+          // font-family: PingFangSC-Regular;
+          color: rgba(102,102,102,1);
+          line-height: 17px;
+        }
+      }
+      .two-menu-lis-active {
+        span {
+          color: #1890ff;
+        }
+        i {
+          background: url("./../img/icon-qianjin2.png");
+          background-repeat: no-repeat;
+          background-size: 12px 12px;
+          float: right;
+          width: 16px;
+          height: 16px;
+          background-position: center center;
+        }
+      }
+    }
+    .selection-comment {
+      float: left;
+      height: 100%;
+      width: 272px;
+      .alphabet {
+        height: 70px;
+        div {
+          padding: 10px 21px;
+          height: 50px;
+        }
+        .letter {
+          float: left;
+          width: 9px;
+          cursor: pointer;
+          height: 17px;
+          font-size: 12px;
+          // font-family: PingFangSC-Medium;
+          color: rgba(153,153,153,1);
+          line-height: 17px;
+          margin: 5px 4px;
+        }
+        .letter-active {
+          color: #1890ff;
+        }
+      }
+      &.selection-comment1 {
+        .alphabet {
+          div {
+            padding: 10px 20px;
+            height: 50px;
+          }
+        }
+      }
+      .nav {
+        height: 14px;
+        background: rgba(24,144,255,1);
+        line-height: 14px;
+        span {
+          width: 6px;
+          font-size: 12px;
+          // font-family: PingFangSC-Medium;
+          color: rgba(255,255,255,1);
+          line-height: 14px;
+          padding-left: 10px;
+        }
+      }
+      .nav-conment {
+        height: 220px;
+        margin: 2px 0;
+        overflow-y: auto;
+        position: relative;
+        width: 270px;
+        .nav-lis {
+          height: 26px;
+          margin-top: 7px;
+          // label {
+          //   font-size: 12px;
+          //   font-family: PingFangSC-Regular;
+          //   line-height: 17px;
+          //   color: #333;
+          //   height: 22px;
+          //   padding: 3px 10px;
+          //   input[type=radio] {
+          //     margin-top: -5px;
+          //   }
+            // .icon {
+            //   display: inline-block;
+            //   width: 18px;
+            //   height: 18px;
+            //   background: url("../../img/icon_kehu2.png");
+            //   background-size: 18px 18px;
+            //   background-repeat: no-repeat;
+            //   position: relative;
+            //   top: 3px;
+            //   margin: 0 5px;
+            // }
+          // }
+        }
+      }
+    }
+    .selection-checked {
+      // margin-left: 324px;
+      float: left;
+      height: 100%;
+      border-left: 1px solid #dbe0eb;
+      width: 180px;
+      .checked-title {
+        background: #dedede;
+        padding: 7px 10px 7px 16px;
+        font-size: 12px;
+        // font-family: PingFangSC-Regular;
+        color: rgba(102,102,102,1);
+        line-height: 17px;
+        color: #666;
+        cursor: pointer;
+      }
+      .checked-lis {
+        height: 265px;
+        overflow-y: scroll;
+        margin: 5px;
+        .nav-lis {
+          height: 26px;
+          margin-top: 7px;
+          // label {
+          //   font-size: 12px;
+          //   font-family: PingFangSC-Regular;
+          //   line-height: 17px;
+          //   color: #333;
+          //   height: 22px;
+          //   padding: 3px 10px;
+          //   input[type=radio] {
+          //     margin-top: -5px;
+          //   }
+          //   .icon {
+          //     display: inline-block;
+          //     width: 18px;
+          //     height: 18px;
+          //     background: url("./../img/icon_kehu2.png");
+          //     background-size: 18px 18px;
+          //     background-repeat: no-repeat;
+          //     position: relative;
+          //     top: 3px;
+          //     margin: 0 5px;
+          //   }
+          // }
+        }
+      }
+    }
+  }
+  .member-selection-success {
+    border-top: 1px solid #dbe0eb;
+    height: 30px;
+    text-align: center;
+    padding: 13px 0 7px 0;
+  }
+}
+
+/*二级菜单 选中数据*/
+// .member-selection1 {
+//   // width: 672px;
+//   display: inline-block;
+//   .member-selection-comment {
+//     .selection-checked {
+//       // margin-left: 484px;
+//       height: 100%;
+//       border-left: 1px solid #dbe0eb;
+//     }
+//   }
+// }
+/*二级菜单没有选择数据*/
+// .member-selection3 {
+//   width: 482px;
+//   .member-selection-comment {
+//     .selection-checked {
+//       // margin-left: 484px;
+//       float: left;
+//       height: 100%;
+//       border-left: 1px solid #dbe0eb;
+//     }
+//   }
+// }
+/*全部 没有二级分支的情况*/
+/*部门 二级分支的情况*/
+/*.member-selection .member-selection-comment .selection-comment.selection-comment1{margin-left: 211px;height: 100%;width: 272px;}*/
+/*首字母样式*/
+/*字母导航条*/
+/*选择按钮区域*/
+/*字母的样式*/
+/*底部样式*/

@@ -1,0 +1,157 @@
+.pagination-bar {
+  text-align: center;
+  overflow: hidden;
+}
+.pagination-bar .pagination-box {
+  font-size: 14px;
+  overflow: hidden;
+  display: inline-block;
+  font-family: "微软雅黑", "Microsoft YaHei", "Arial", "Helvitica", "Verdana", "Tohoma", "san-serif";
+  padding: 10px 0px;
+}
+.pagination-bar .pagination-box .deep-grey-text {
+  color: #666666;
+}
+.pagination-bar .pagination-box .shallow-grey-text {
+  color: #cccccc;
+}
+.pagination-bar .pagination-box .black-text {
+  color: #333333;
+}
+.pagination-bar .pagination-box .blue-color {
+  color: #4699EE;
+}
+.pagination-bar .pagination-box .grey-border {
+  border: 1px solid #cccccc;
+}
+.pagination-bar .pagination-box .btn-bg {
+  background-color: #ffffff;
+}
+.pagination-bar .pagination-box .fl {
+  float: left;
+}
+.pagination-bar .pagination-box .text-v-center {
+  line-height: 30px;
+}
+.pagination-bar .pagination-box .gap {
+  margin-right: 6px;
+}
+.pagination-bar .pagination-box .big-gap {
+  margin-right: 9px;
+}
+.pagination-bar .pagination-box .disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.pagination-bar .pagination-box .no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
+}
+.pagination-bar .pagination-box span {
+  display: inline-block;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
+}
+.pagination-bar .pagination-box .pagination-select {
+  float: left;
+  margin-right: 6px;
+  border: 1px solid #cccccc;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: url("../img/xialajiantou.png");
+  background-size: 11px auto;
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  padding: 4px;
+  padding-right: 23px;
+  border-radius: 2px;
+  text-shadow: none;
+  color: #666666;
+}
+.pagination-bar .pagination-box .pagination-btn {
+  color: #666666;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  margin-right: 6px;
+  float: left;
+  border-radius: 2px;
+  line-height: 18px;
+  padding: 5px 11px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.pagination-bar .pagination-box .pagination-list {
+  float: left;
+  display: inline-block;
+  overflow: hidden;
+}
+.pagination-bar .pagination-box .pagination-list .pagination-item-ellipsis {
+  color: #666666;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
+  float: left;
+  margin-right: 6px;
+  line-height: 30px;
+  font-size: 14px;
+}
+.pagination-bar .pagination-box .pagination-list .pagination-item {
+  color: #666666;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  float: left;
+  margin-right: 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  min-width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 20px;
+  padding: 5px 5px;
+}
+.pagination-bar .pagination-box .pagination-list .pagination-item.pagination-item-active {
+  color: #4699EE;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.pagination-bar .pagination-box .pagination-input {
+  float: left;
+  margin-right: 6px;
+  border: 1px solid #cccccc;
+  width: 50px;
+  height: 30px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 2px;
+  color: #666666;
+}
