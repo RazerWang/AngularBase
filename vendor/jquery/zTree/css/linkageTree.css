@@ -1,0 +1,79 @@
+
+.linkage-tree {margin:0; color:#333}
+.linkage-tree li{padding:0; margin:0; list-style:none; line-height:30px; text-align:left; white-space:nowrap; outline:0}
+.linkage-tree li ul{ margin:0; padding:0 0 0 18px}
+
+.linkage-tree li a {margin:0; cursor:pointer; color:#333; background-color: transparent;
+	text-decoration:none; vertical-align:top; display: inline-block;vertical-align: middle;}
+.linkage-tree li a:hover {text-decoration:underline}
+.linkage-tree li a.curSelectedNode {background-color:#FFE6B0; opacity:0.8;}
+.linkage-tree li a.tmpTargetNode_inner {background-color:#316AC5; opacity:0.8; filter:alpha(opacity=80);color: white;}
+.linkage-tree li a input.rename {height:14px; width:80px; padding:0; margin:0;
+	font-size:12px; border:1px #7EC4CC solid; *border:0px}
+.linkage-tree li span {margin-right:4px;font-size: 14px;}
+
+.linkage-tree li span.button.chk.checkbox_false_part,.linkage-tree li span.button.chk.checkbox_false_part_focus,.linkage-tree li span.button.chk.checkbox_false_full,.linkage-tree li span.button.chk.checkbox_false_full_focus,.linkage-tree li span.button.chk.checkbox_true_part_focus,.linkage-tree li span.button.chk.checkbox_true_part{-webkit-appearance: none;position: relative;vertical-align:middle;margin-top:0px;margin-bottom:0px;background:#fff;border:#999 solid 1px;border-radius: 2px;min-height: 16px;min-width: 16px;}
+.linkage-tree li span.button.chk.checkbox_true_full,.linkage-tree li span.button.chk.checkbox_true_full_focus{-webkit-appearance: none;position: relative;vertical-align:middle;margin-top:0px;margin-bottom:0px;border:#999 solid 1px;border-radius: 2px;min-height: 16px;min-width: 16px;background: #1890FF;border:#fff;position: relative;}
+.linkage-tree li span.button.chk.checkbox_true_full:after,.linkage-tree li span.button.chk.checkbox_true_full_focus:after{content: '';top: 4px;left: 4px;  position: absolute;vertical-align: middle;margin-top: 0;background: transparent;border: #fff solid 1px;border-top: none;border-right: none;  height: 5px;width: 8px;-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
+
+
+
+/*.linkage-tree li span.button.chk.checkbox_true_disable {background-position:-14px -56px}
+.linkage-tree li span.button.chk.radio_false_full {background-position:-28px 0}
+.linkage-tree li span.button.chk.radio_false_full_focus {background-position:-28px -14px}
+.linkage-tree li span.button.chk.radio_false_part {background-position:-28px -28px}
+.linkage-tree li span.button.chk.radio_false_part_focus {background-position:-28px -42px}
+.linkage-tree li span.button.chk.radio_false_disable {background-position:-28px -56px}
+.linkage-tree li span.button.chk.radio_true_full {background-position:-42px 0}
+.linkage-tree li span.button.chk.radio_true_full_focus {background-position:-42px -14px}
+.linkage-tree li span.button.chk.radio_true_part {background-position:-42px -28px}
+.linkage-tree li span.button.chk.radio_true_part_focus {background-position:-42px -42px}
+.linkage-tree li span.button.chk.radio_true_disable {background-position:-42px -56px}
+
+
+*/
+
+
+ul.linkage-tree.zTreeDragUL {margin:0; padding:0; position:absolute; width:auto; height:auto;overflow:hidden; background-color:#cfcfcf; border:1px #00B83F dotted; opacity:0.8; filter:alpha(opacity=80)}
+.zTreeMask {z-index:10000; background-color:#cfcfcf; opacity:0.0; filter:alpha(opacity=0); position:absolute}
+span.tmpzTreeMove_arrow {width:16px; height:16px; display: inline-block; padding:0;  position:absolute;
+	background-color:transparent; background-repeat:no-repeat; background-attachment: scroll;top: 8px;}
+span.tmpzTreeMove_arrow:before {content: "\e6d9"}
+
+
+.diy-dom{display: inline-block;position: absolute;right: 0px;transition-duration: 0.5s;transform: translateX(100%);-webkit-transform: translateX(100%);width: 0px;top: 3px;}
+.diy-dom i{cursor: pointer;margin-left: 2px;}
+.linkage-tree li:hover > .level-con > .diy-dom{transform: translateX(0%);-webkit-transform: translateX(0%);width: auto;}
+.linkage-tree li{position: relative;}
+
+span.tmpzTreeMove_arrow,.linkage-tree li span.button{width: 16px;display: inline-block;font-family:"iconfont" !important;
+  font-size:18px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;font-size: 14px;cursor: pointer;color: #C7C7D1;}
+.linkage-tree li span.button.switch {vertical-align: middle;float: left;height: 16px;}
+.linkage-tree li span.button.root_open:before,.linkage-tree li span.button.bottom_open:before,.linkage-tree li span.button.roots_open:before,.linkage-tree li span.button.center_open:before{content: "\e708";}
+.linkage-tree li span.button.root_close:before,.linkage-tree li span.button.bottom_close:before,.linkage-tree li span.button.roots_close:before,.linkage-tree li span.button.center_close:before{content: "\e69f";}
+.linkage-tree li span.button.ico_open:before,.linkage-tree li span.button.ico_close:before,.linkage-tree li span.button.ico_docu:before{content: "\e724"}
+
+
+
+
+/*add by joyXie*/
+.linkage-tree>li>.kk{padding-left: 0px;}
+.linkage-tree li ul{padding: 0px;}
+.linkage-tree .level1 .level-con {padding-left: 18px;}
+.linkage-tree .level2 .level-con {padding-left: 36px;}
+.linkage-tree .level3 .level-con {padding-left: 54px;}
+.linkage-tree .level4 .level-con {padding-left: 72px;}
+
+.linkage-tree-menu .linkage-tree li{line-height:44px; }
+.linkage-tree-menu .linkage-tree li a{margin-left: 15px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;}
+
+.linkage-tree-menu .linkage-tree .level-con{border-left: 2px solid transparent}
+
+.linkage-tree-menu .linkage-tree .curSelectedNode{border-left: 2px solid #1890FF;background-color: #F3F3F6;}

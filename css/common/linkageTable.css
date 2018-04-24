@@ -6,8 +6,23 @@
  * @version table组件
  */
 /****table****/
-.table-container {
+/**
+ * @Author WangZe (wangze@linkstec.com)
+ * @Date 2018/2/26 11:39
+ * @Function 全局变量
+ **/
+/**辅色**/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.table-border {
   border: 1px solid #DBE0EB;
+  border-top: none;
+}
+.table-container {
   border-top: none;
   position: relative;
 }
@@ -17,13 +32,19 @@
 .table-container .tableDiv.modal-table-div {
   margin-bottom: 0px;
 }
+.table-container .tableDiv .tr-click-label {
+  position: absolute;
+  right: 0px;
+  width: 10px;
+  overflow: hidden;
+  transition-duration: 0.5s;
+}
 .table-container .tableDiv .table {
   background-color: #fff;
   margin-bottom: 0px;
 }
 .table-container .tableDiv .table tr {
   position: relative;
-  border-bottom: 1px solid #DBE0EB;
 }
 .table-container .tableDiv .table tr td,
 .table-container .tableDiv .table tr th {
@@ -39,11 +60,13 @@
 }
 .table-container .tableDiv .table tr td .trangleUp,
 .table-container .tableDiv .table tr th .trangleUp {
-  top: 12px;
+  top: 50%;
+  margin-top: -6px;
 }
 .table-container .tableDiv .table tr td .trangleDown,
 .table-container .tableDiv .table tr th .trangleDown {
-  top: 23px;
+  top: 50%;
+  margin-top: 4px;
 }
 .table-container .tableDiv .table tr td:first-child,
 .table-container .tableDiv .table tr th:first-child {
@@ -56,6 +79,12 @@
   height: 23px;
   line-height: 23px;
   box-sizing: border-box;
+  border-right: 1px solid #DBE0EB;
+  border-bottom: 1px solid #DBE0EB;
+  vertical-align: middle;
+}
+.table-container .tableDiv .table tr th:last-child {
+  border-right: none;
 }
 .table-container .tableDiv .table tr td {
   height: 40px;
@@ -63,7 +92,12 @@
   color: #666666;
   font-size: 14px;
   padding: 0px 8px;
+  border-top: none;
+  border-bottom: 1px solid #DBE0EB;
   box-sizing: border-box;
+}
+.table-container .tableDiv .table tr td .td-span {
+  display: inline;
 }
 .table-container .tableDiv .table tr td .link-span {
   cursor: pointer;
@@ -84,32 +118,41 @@
 }
 .table-container .tableDiv .table tr td .operate-span {
   position: absolute;
-  right: 0px;
+  left: 0px;
   background-color: #F0F8FF;
   transition-duration: 0.3s;
   width: 0px;
   overflow: hidden;
   cursor: pointer;
   z-index: 11;
+  margin-left: 100px;
 }
 .table-container .tableDiv .table tr td .operate-span.operate-span-open .lk-icon-arrowD:before {
   display: inline-block;
   transition-duration: 0.5s;
   transform: rotate(180deg);
 }
+.table-container .tableDiv .table tr td.is-form-td {
+  overflow: inherit;
+}
+.table-container .tableDiv .table tr td.is-form-td .td-span {
+  display: block;
+}
+.table-container .tableDiv .table tr td.is-form-td .td-span .form-wrap {
+  width: 100%;
+}
+.table-container .tableDiv .table tr td.is-form-td .td-span .form-wrap .form-control {
+  width: 100%;
+}
 .table-container .tableDiv .table tr.tr-hover td .operate-span {
-  width: 100px;
+  margin-left: 0px;
+  width: 100px!important;
 }
 .table-container .tableDiv .table tr:hover td {
   background-color: #F0F8FF;
 }
-.table-container .tableDiv .table.table-bordered {
-  border: none;
-}
-.table-container .tableDiv .table.table-bordered tr th,
-.table-container .tableDiv .table.table-bordered tr td {
-  border: 1px solid #DBE0EB;
-  border-left: 0;
+.table-container .tableDiv .table tr.tr-click {
+  background-color: #F3F3F6 !important;
 }
 .table-container .tableDiv .table.no-table-border {
   border-left: 0;
@@ -129,6 +172,35 @@
   text-overflow: inherit;
   white-space: inherit;
   overflow: auto;
+}
+.table-container .tableDiv.table-header tr {
+  border-top: 1px solid #DBE0EB;
+}
+.table-container .tableDiv.table-header tr .trangleUp {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 6px solid #CCCCCC;
+  position: absolute;
+  right: 5px;
+  top: 15px;
+}
+.table-container .tableDiv.table-header tr .trangleDown {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #CCCCCC;
+  right: 5px;
+  top: 25px;
+}
+.table-container .tableDiv.table-header tr .trangleUp.trangleOn {
+  border-bottom-color: #333;
+}
+.table-container .tableDiv.table-header tr .trangleDown.trangleOn {
+  border-top-color: #333;
 }
 .table-container .table-hover tbody tr.tr-hover {
   background-color: #F0F8FF;
@@ -162,6 +234,9 @@
   top: 0px;
   z-index: 2;
 }
+.table-container .table-columns-left thead tr {
+  border-top: 1px solid #DBE0EB;
+}
 .table-container .table-body-columns-left {
   overflow: hidden;
 }
@@ -175,6 +250,9 @@
   z-index: 2;
   overflow: hidden;
   border-left: 1px solid #DBE0EB;
+}
+.table-container .table-columns-right thead tr {
+  border-top: 1px solid #DBE0EB;
 }
 .table-container .table-body-columns-right {
   overflow: hidden;

@@ -53,9 +53,9 @@
   padding: 7.5px 10px;
   cursor: pointer;
 }
-.transfer-wrap .transfer-container .transfer-box .transfer-box-header .transfer-item input[type="checkbox"] {
+.transfer-wrap .transfer-container .transfer-box .transfer-box-header .transfer-item input.transfer-checkbox[type="checkbox"] {
   margin-right: 10px;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 .transfer-wrap .transfer-container .transfer-box .transfer-list {
   overflow: auto;
@@ -66,17 +66,30 @@
   padding: 5px 10px;
   cursor: pointer;
   height: 28px;
+  overflow: hidden;
 }
 .transfer-wrap .transfer-container .transfer-box .transfer-list .transfer-item.active {
   background-color: #1890FF;
   color: #ffffff;
 }
-.transfer-wrap .transfer-container .transfer-box .transfer-list .transfer-item input[type="checkbox"] {
+.transfer-wrap .transfer-container .transfer-box .transfer-list .transfer-item.parent-active {
+  background-color: #ffffff;
+  color: #1890FF;
+}
+.transfer-wrap .transfer-container .transfer-box .transfer-list .transfer-item input.transfer-checkbox[type="checkbox"] {
   margin-right: 10px;
-  vertical-align: bottom;
+  vertical-align: middle;
+}
+.transfer-wrap .transfer-container .transfer-box .transfer-list .transfer-item .transfer-delete-btn {
+  float: right;
+  color: #FB4240;
+  font-size: 14px;
 }
 .transfer-wrap .transfer-container .transfer-box .transfer-list .transfer-item .transfer-item-text {
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  vertical-align: middle;
 }
 .transfer-wrap .transfer-container .transfer-btn-box {
   margin: 0 20px;

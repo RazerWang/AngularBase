@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/**
+ * @authors WangZe
+ * @date    2018-04-23 13:13:00
+ * @version switch开关
+ */
+/**
+ * @Author WangZe (wangze@linkstec.com)
+ * @Date 2018/2/26 11:39
+ * @Function 全局变量
+ **/
+/**辅色**/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.linkage-switch {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  vertical-align: middle;
+}
+.linkage-switch input.linkage-switch-checkbox {
+  display: none;
+}
+.linkage-switch .slider {
+  width: 50px;
+  height: 24px;
+  background: #e6e6e6;
+  border-radius: 24px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+.linkage-switch .slider .slider-inner-text {
+  position: absolute;
+  font-weight: normal;
+  left: 20px;
+  width: 30px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 12px;
+  color: #1890FF;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
+}
+.linkage-switch .slider .slider-thumb {
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  border-radius: 22px;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  transition: all 0.4s ease-in-out;
+}
+.linkage-switch input.linkage-switch-checkbox:checked + .slider {
+  background: #1890FF;
+}
+.linkage-switch input.linkage-switch-checkbox:checked + .slider .slider-inner-text {
+  left: 0;
+  color: #ffffff;
+}
+.linkage-switch input.linkage-switch-checkbox:checked + .slider .slider-thumb {
+  left: 27px;
+}
+.linkage-switch input.linkage-switch-checkbox:checked + .slider:active .slider-thumb {
+  width: 35px;
+  left: 14px;
+}
+.linkage-switch input.linkage-switch-checkbox + .slider:active .slider-thumb {
+  width: 35px;
+}
+.linkage-switch .slider.big-slider {
+  width: 70px;
+}
+.linkage-switch .slider.big-slider .slider-inner-text {
+  width: 54px;
+  left: 17px;
+}
+.linkage-switch input.linkage-switch-checkbox:checked + .slider.big-slider .slider-thumb {
+  left: 47px;
+}
+.linkage-switch input.linkage-switch-checkbox:checked + .slider.big-slider:active .slider-thumb {
+  left: 34px;
+}
+.linkage-switch input.linkage-switch-checkbox[disabled] + .slider,
+.linkage-switch input.linkage-switch-checkbox[disabled] + .slider.big-slider {
+  cursor: not-allowed;
+  background-color: #e6e6e6;
+}
+.linkage-switch input.linkage-switch-checkbox[disabled] + .slider .slider-inner-text,
+.linkage-switch input.linkage-switch-checkbox[disabled] + .slider.big-slider .slider-inner-text {
+  color: #999999;
+}
